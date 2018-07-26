@@ -9,38 +9,49 @@ import javax.swing.JOptionPane;
 
 public class ProdutoDAO {
     
-    public static boolean inserir(Produto cliente){
+    public static boolean inserir(Produto produto){
        /* String sql = "INSERT INTO clientes "
             + " ( nome ) VALUES "
             + " ( '" + cliente.getNome() + "' );";*/
        
-        String sql = "INSERT INTO clientes "
-            + " ( nome, email ) "
+        String sql = "INSERT INTO produtos "
+            + " ( nome, quantidade, preco , lote , fabricacao, validade , codCategoria ) "
             + " VALUES ( "
-            + " '" + cliente.getNome()              + "' , "
-            + " '" + cliente.getEmail()          + "'  "
+            + " '" + produto.getNome()              + "' , "
+            + " " + produto.getQuant()           + "  ,"
+            + " " + produto.getPreco()           + "  ,"
+            + " '" + produto.getLote()           + "'  ,"
+            + " " + produto.getFab()           + "  ,"
+            + " " + produto.getVal()           + "  ,"
+            + "  " + produto.getCategoria().getCodigo()+ "    "
             + " );";
         return conexao.executar(sql);
     }
     
       
-    public static boolean editar(Produto cliente){
-        String sql = "UPDATE clientes SET "
-            + " nome =  '" + cliente.getNome() + "' , "
-            + " email =  '" + cliente.getEmail() + "' "
-            + " WHERE codigo = " + cliente.getCodigo();
+    public static boolean editar(Produto produto){
+        String sql = "UPDATE produtos SET "
+            + " nome =  '" + produto.getNome() + "' , "
+            + " quantidade =  " + produto.getQuant() + " , "
+            + " preco = " + produto.getPreco() + " , "
+            + " lote = '" + produto.getLote() + "' , "
+            + " fabricacao = " + produto.getFab() + " , "
+            + " validade = " + produto.getVal() + " , "
+            + " codCategoria = " + produto.getCategoria().getCodigo() + " , "  
+            + " WHERE codigo = " + produto.getCodigo();
         return conexao.executar(sql);
     }
     
     public static boolean excluir(Produto categoria){
-        String sql = "DELETE FROM clientes "
+        String sql = "DELETE FROM produtos "
             + " WHERE codigo = " + categoria.getCodigo();
         return conexao.executar(sql);
     }
     
     public static List<Produto> getCategoria(){
         List<Produto> lista = new ArrayList<>();
-        String sql = "SELECT * FROM clientes ORDER BY nome";
+        String sql = "SELECT * FROM produtos ORDER BY nome";
+        //
         ResultSet rs = conexao.consultar( sql );
         
         if( rs != null ){
