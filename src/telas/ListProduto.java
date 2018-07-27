@@ -6,7 +6,6 @@
 package telas;
 
 import classes.Produto;
-import classes.ProdutoDAO;
 import com.sun.org.apache.xerces.internal.impl.xpath.regex.Match;
 import java.util.List;
 import javax.swing.JDesktopPane;
@@ -56,7 +55,7 @@ public class ListProduto extends javax.swing.JInternalFrame {
 
         jLabel1 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
-        tableCidades = new javax.swing.JTable();
+        tableProdutos = new javax.swing.JTable();
         btnEditar = new javax.swing.JButton();
         btnExcluir = new javax.swing.JButton();
 
@@ -67,7 +66,7 @@ public class ListProduto extends javax.swing.JInternalFrame {
 
         jLabel1.setText("Produtos Cadastrados:");
 
-        tableCidades.setModel(new javax.swing.table.DefaultTableModel(
+        tableProdutos.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {},
                 {},
@@ -78,7 +77,7 @@ public class ListProduto extends javax.swing.JInternalFrame {
 
             }
         ));
-        jScrollPane1.setViewportView(tableCidades);
+        jScrollPane1.setViewportView(tableProdutos);
 
         btnEditar.setText("EDITAR");
         btnEditar.addActionListener(new java.awt.event.ActionListener() {
@@ -174,6 +173,6 @@ public class ListProduto extends javax.swing.JInternalFrame {
     private javax.swing.JButton btnExcluir;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTable tableCidades;
+    private javax.swing.JTable tableProdutos;
     // End of variables declaration//GEN-END:variables
 }

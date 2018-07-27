@@ -16,7 +16,7 @@ public class Produto {
     public Produto() {
     }
 
-    public Produto(int codigo, String nome , String email) {
+    public Produto(int codigo, String nome , int quantidade, double preco, Date fabricacao, Date validade, String categoria, String lote) {
         this.codigo = codigo;
         this.nome = nome;
         this.quantidade = quantidade;
