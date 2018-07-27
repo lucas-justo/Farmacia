@@ -10,7 +10,8 @@ public class Produto {
     private double preco;
     private Date fabricacao;
     private Date validade;
-    
+    private String categoria;
+    private String lote;
 
     public Produto() {
     }
@@ -22,6 +23,8 @@ public class Produto {
         this.preco = preco;
         this.fabricacao = fabricacao;
         this.validade = validade;
+        this.categoria = categoria;
+        this.lote = lote;
     }
     
     @Override
@@ -75,6 +78,22 @@ public class Produto {
 
     public void setValidade(Date validade) {
         this.validade = validade;
+    }
+
+    public String getCategoria() {
+        return categoria;
+    }
+
+    public void setCategoria(String categoria) {
+        this.categoria = categoria;
+    }
+
+    public String getLote() {
+        return lote;
+    }
+
+    public void setLote(String lote) {
+        this.lote = lote;
     }
         
 

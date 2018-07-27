@@ -33,16 +33,16 @@ public class ListProduto extends javax.swing.JInternalFrame {
     private void carregarTabela(){
         
         String[] colunas = { "Código" , "Nome"};
-        List<Cidade> listaDeCidades = CidadeDAO.getCidades();
+        List<Produto> listaDeProdutos = ProdutoDAO.getProdutos();
         DefaultTableModel modelo = new DefaultTableModel();
         modelo.setColumnIdentifiers(colunas);
         
-        for( Cidade cid : listaDeCidades ){
-            Object[] obj = { cid.getCodigo() , cid.getNome() };
+        for( Produto pro : listaDeProdutos ){
+            Object[] obj = { pro.getCodigo() , pro.getNome() };
             modelo.addRow( obj );
         }
         
-        tableCidades.setModel( modelo );
+        tableProdutos.setModel( modelo );
     }
     
     /**
@@ -133,14 +133,14 @@ public class ListProduto extends javax.swing.JInternalFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnExcluirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnExcluirActionPerformed
-        int linha = tableCidades.getSelectedRow();
+        int linha = tableProdutos.getSelectedRow();
         if( linha == -1 ){
             JOptionPane.showMessageDialog(this, 
-                    "Você deve selecionar uma cidade!");
+                    "Você deve selecionar um produto!");
         }else{
-            String nome = (String) tableCidades.getValueAt(linha, 1);
+            String nome = (String) tableProdutos.getValueAt(linha, 1);
             int resposta = JOptionPane.showConfirmDialog(this,
-                    "Confirma a exclusão da cidade " + nome + "?", 
+                    "Confirma a exclusão do produto " + nome + "?", 
                     "Exluir Cidade", 
                     JOptionPane.YES_NO_OPTION);
             
