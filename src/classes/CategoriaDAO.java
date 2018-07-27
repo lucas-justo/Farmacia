@@ -4,8 +4,9 @@ import java.sql.ResultSet;
 import java.util.ArrayList;
 import java.util.List;
 import javax.swing.JOptionPane;
-import model.Categoria;
-import model.Cidade;
+import classes.CategoriaDAO;
+import classes.Produto;
+import classes.Categoria;
 
 public class CategoriaDAO {
     
