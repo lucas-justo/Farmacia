@@ -60,13 +60,16 @@ public class ListProduto extends javax.swing.JInternalFrame {
         btnEditar = new javax.swing.JButton();
         btnExcluir = new javax.swing.JButton();
 
+        setBorder(null);
         setClosable(true);
         setIconifiable(true);
         setMaximizable(true);
-        setTitle("Lista de Cidades");
+        setTitle("Lista de Produtos");
 
-        jLabel1.setText("Cidades Cadastradas:");
+        jLabel1.setFont(new java.awt.Font("Estrangelo Edessa", 1, 18)); // NOI18N
+        jLabel1.setText("Produtos cadastrados");
 
+        tableCidades.setForeground(new java.awt.Color(204, 204, 204));
         tableCidades.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {},
@@ -103,7 +106,7 @@ public class ListProduto extends javax.swing.JInternalFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(jLabel1)
-                        .addContainerGap(430, Short.MAX_VALUE))
+                        .addContainerGap(379, Short.MAX_VALUE))
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 385, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -128,6 +131,8 @@ public class ListProduto extends javax.swing.JInternalFrame {
                         .addComponent(btnExcluir)))
                 .addContainerGap(15, Short.MAX_VALUE))
         );
+
+        getAccessibleContext().setAccessibleName("Lista de Produtos");
 
         pack();
     }// </editor-fold>//GEN-END:initComponents

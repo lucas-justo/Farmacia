@@ -53,7 +53,7 @@ public class TelaInicial extends javax.swing.JFrame {
             }
         });
 
-        menuCliente.setText("Cliente");
+        menuCliente.setText("Cadastro de Produtos");
         menuCliente.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 menuClienteActionPerformed(evt);
@@ -61,7 +61,7 @@ public class TelaInicial extends javax.swing.JFrame {
         });
         menuCadastrar.add(menuCliente);
 
-        menuOrdem.setText("Ordem");
+        menuOrdem.setText("Lista de Produtos");
         menuOrdem.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 menuOrdemActionPerformed(evt);
