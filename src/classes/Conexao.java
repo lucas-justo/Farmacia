@@ -6,8 +6,8 @@ import java.sql.ResultSet;
 import java.sql.Statement;
 import javax.swing.JOptionPane;
 
-public class conexao {
-    private static final String CONN = "jdbc:mysql://localhost:3306/manutencao?zeroDateTimeBehavior=convertToNull";
+public class Conexao {
+    private static final String CONN = "jdbc:mysql://10.10.138.10:3306/farmacia?zeroDateTimeBehavior=convertToNull";
     private static final String USER = "root";
     private static final String PASSWORD = "";
     private static final String DRIVER = "com.mysql.jdbc.Driver";

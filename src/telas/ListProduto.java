@@ -5,13 +5,13 @@
  */
 package telas;
 
+import classes.Produto;
+import classes.ProdutoDAO;
 import com.sun.org.apache.xerces.internal.impl.xpath.regex.Match;
-import dao.CidadeDAO;
 import java.util.List;
 import javax.swing.JDesktopPane;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
-import model.Cidade;
 
 /**
  *
@@ -32,17 +32,17 @@ public class ListProduto extends javax.swing.JInternalFrame {
 
     private void carregarTabela(){
         
-        String[] colunas = { "Código" , "Nome"};
-        List<Cidade> listaDeCidades = CidadeDAO.getCidades();
+        String[] colunas = { "Código", "Nome", "Quantidade", "Preco", "Fabricação", "Validade", "Categoria", "Lote"};
+        List<Produto> listaDeProdutos = ProdutoDAO.getProdutos();
         DefaultTableModel modelo = new DefaultTableModel();
         modelo.setColumnIdentifiers(colunas);
         
-        for( Cidade cid : listaDeCidades ){
-            Object[] obj = { cid.getCodigo() , cid.getNome() };
+        for( Produto pro : listaDeProdutos ){
+            Object[] obj = { pro.getCodigo() , pro.getNome(), pro.getQuantidade(), pro.getPreco(), pro.getFabricacao(), pro.getValidade(), pro.getCategoria(), pro.getLote() };
             modelo.addRow( obj );
         }
         
-        tableCidades.setModel( modelo );
+        tableProdutos.setModel( modelo );
     }
     
     /**
@@ -65,6 +65,7 @@ public class ListProduto extends javax.swing.JInternalFrame {
         setIconifiable(true);
         setMaximizable(true);
         setTitle("Lista de Produtos");
+
 
         jLabel1.setFont(new java.awt.Font("Estrangelo Edessa", 1, 18)); // NOI18N
         jLabel1.setText("Produtos cadastrados");
@@ -106,7 +107,11 @@ public class ListProduto extends javax.swing.JInternalFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(jLabel1)
+<<<<<<< HEAD
                         .addContainerGap(379, Short.MAX_VALUE))
+=======
+                        .addContainerGap(425, Short.MAX_VALUE))
+>>>>>>> 11829989c22c8fe04a347db12bfbf8256bdb54bb
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 385, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -122,14 +127,14 @@ public class ListProduto extends javax.swing.JInternalFrame {
                 .addComponent(jLabel1)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGap(31, 31, 31)
                         .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 282, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(68, 68, 68)
+                        .addGap(93, 93, 93)
                         .addComponent(btnEditar)
                         .addGap(74, 74, 74)
                         .addComponent(btnExcluir)))
-                .addContainerGap(15, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         getAccessibleContext().setAccessibleName("Lista de Produtos");
@@ -138,35 +143,35 @@ public class ListProduto extends javax.swing.JInternalFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnExcluirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnExcluirActionPerformed
-        int linha = tableCidades.getSelectedRow();
+        int linha = tableProdutos.getSelectedRow();
         if( linha == -1 ){
             JOptionPane.showMessageDialog(this, 
-                    "Você deve selecionar uma cidade!");
+                    "Você deve selecionar um produto!");
         }else{
-            String nome = (String) tableCidades.getValueAt(linha, 1);
+            String nome = (String) tableProdutos.getValueAt(linha, 1);
             int resposta = JOptionPane.showConfirmDialog(this,
-                    "Confirma a exclusão da cidade " + nome + "?", 
-                    "Exluir Cidade", 
+                    "Confirma a exclusão do produto " + nome + "?", 
+                    "Excluir Produto", 
                     JOptionPane.YES_NO_OPTION);
             
             if( resposta == JOptionPane.YES_OPTION ){
-                int codigo = (int) tableCidades.getValueAt(linha, 0);
-                Cidade cid = new Cidade();
-                cid.setCodigo( codigo );
-                CidadeDAO.excluir( cid );
+                int codigo = (int) tableProdutos.getValueAt(linha, 0);
+                Produto pro = new Produto();
+                pro.setProduto( codigo );
+                ProdutoDAO.excluir( pro );
                 carregarTabela();
             }
         }
     }//GEN-LAST:event_btnExcluirActionPerformed
 
     private void btnEditarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEditarActionPerformed
-        int linha = tableCidades.getSelectedRow();
+        int linha = tableProdutos.getSelectedRow();
         if( linha == -1 ){
             JOptionPane.showMessageDialog(this, 
-                    "Você deve selecionar uma cidade!");
+                    "Você deve selecionar um produto!");
         }else{
-            int codigo = (int) tableCidades.getValueAt(linha, 0);
-            FrmCidade formulario = new FrmCidade( codigo );
+            int codigo = (int) tableProdutos.getValueAt(linha, 0);
+            FrmProduto formulario = new FrmProduto( codigo );
             this.painelTelaInicial.add( formulario );
             formulario.setVisible( true );
         }
