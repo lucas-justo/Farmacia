@@ -10,13 +10,13 @@ public class Produto {
     private double preco;
     private Date fabricacao;
     private Date validade;
-    private String categoria;
+    private Categoria categoria;
     private String lote;
 
     public Produto() {
     }
 
-    public Produto(int codigo, String nome , int quantidade, double preco, Date fabricacao, Date validade, String categoria, String lote) {
+    public Produto(int codigo, String nome , int quantidade, double preco, Date fabricacao, Date validade, Categoria categoria, String lote) {
         this.codigo = codigo;
         this.nome = nome;
         this.quantidade = quantidade;
@@ -80,14 +80,14 @@ public class Produto {
         this.validade = validade;
     }
 
-    public String getCategoria() {
+    public Categoria getCategoria() {
         return categoria;
     }
 
-    public void setCategoria(String categoria) {
+    public void setCategoria(Categoria categoria) {
         this.categoria = categoria;
     }
-
+    
     public String getLote() {
         return lote;
     }

@@ -68,7 +68,7 @@ public class ProdutoDAO {
                     cat.setCodigo( rs.getInt(8) );
                     cat.setNome( rs.getString(9) );
                     //
-                    pro.setCidade(cat);
+                    pro.setCategoria(cat);
                     lista.add(pro);
                 } 
             }catch(Exception e){
