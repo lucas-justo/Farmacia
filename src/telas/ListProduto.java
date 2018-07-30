@@ -9,15 +9,10 @@ import javax.swing.JDesktopPane;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 
-/**
- *
- * @author assparremberger
- */
+
 public class ListProduto extends javax.swing.JInternalFrame {
 
-    /**
-     * Creates new form ListCidades
-     */
+  
     private JDesktopPane painelTelaInicial; 
     
     public ListProduto( JDesktopPane painelTelaInicial ) {
