@@ -14,12 +14,12 @@ import classes.ProdutoDAO;
  *
  * @author 181710152
  */
-public class FrmCadastar_Categoria extends javax.swing.JPanel {
+public class FrmCategoria extends javax.swing.JPanel {
 
     /**
      * Creates new form NewJPanel
      */
-    public FrmCadastar_Categoria() {
+    public FrmCategoria() {
         initComponents();
     }
 

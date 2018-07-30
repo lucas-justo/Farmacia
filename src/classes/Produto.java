@@ -1,7 +1,7 @@
 
 package classes;
 
-import java.sql.Date;
+import java.util.Date;
 
 public class Produto {
     private int codigo;

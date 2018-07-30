@@ -19,6 +19,8 @@ public class TelaInicial extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
+        jdpManutencao.setPreferredSize(new java.awt.Dimension(600, 500));
+
         javax.swing.GroupLayout jdpManutencaoLayout = new javax.swing.GroupLayout(jdpManutencao);
         jdpManutencao.setLayout(jdpManutencaoLayout);
         jdpManutencaoLayout.setHorizontalGroup(
@@ -61,11 +63,11 @@ public class TelaInicial extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jdpManutencao, javax.swing.GroupLayout.Alignment.TRAILING)
+            .addComponent(jdpManutencao, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 415, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jdpManutencao, javax.swing.GroupLayout.Alignment.TRAILING)
+            .addComponent(jdpManutencao, javax.swing.GroupLayout.DEFAULT_SIZE, 290, Short.MAX_VALUE)
         );
 
         pack();

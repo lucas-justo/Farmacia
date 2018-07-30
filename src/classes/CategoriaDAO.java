@@ -12,7 +12,7 @@ public class CategoriaDAO {
     
     public static boolean inserir(Categoria categoria){
         String sql = "INSERT INTO categorias (nome)"
-                + "VALUES ( ' " + categoria.getNome() + "'  );";
+                     + "VALUES ( ' " + categoria.getNome() + "'  );";
         return Conexao.executar(sql);
     }
     
