@@ -15,6 +15,10 @@ public class ListProduto extends javax.swing.JInternalFrame {
   
     private JDesktopPane painelTelaInicial; 
     
+    public ListProduto(){
+        
+    }
+    
     public ListProduto( JDesktopPane painelTelaInicial ) {
         initComponents();
         carregarTabela();
@@ -108,14 +112,14 @@ public class ListProduto extends javax.swing.JInternalFrame {
                 .addComponent(jLabel1)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(31, 31, 31)
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 282, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
                         .addGap(93, 93, 93)
                         .addComponent(btnEditar)
                         .addGap(74, 74, 74)
-                        .addComponent(btnExcluir)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addComponent(btnExcluir))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(18, 18, 18)
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 282, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(24, Short.MAX_VALUE))
         );
 
         pack();

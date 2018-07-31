@@ -33,7 +33,9 @@ public class TelaInicial extends javax.swing.JFrame {
         jMenuBar1 = new javax.swing.JMenuBar();
         menu = new javax.swing.JMenu();
         menuProduto = new javax.swing.JMenuItem();
+        menuCategoria = new javax.swing.JMenuItem();
         jMenu3 = new javax.swing.JMenu();
+        menuListarProduto = new javax.swing.JMenuItem();
 
         jMenuItem1.setText("jMenuItem1");
 
@@ -54,14 +56,14 @@ public class TelaInicial extends javax.swing.JFrame {
             .addGap(0, 480, Short.MAX_VALUE)
         );
 
-        menu.setText("File");
+        menu.setText("Cadastrar");
         menu.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 menuActionPerformed(evt);
             }
         });
 
-        menuProduto.setText("Cadastro de Produto");
+        menuProduto.setText("Produto");
         menuProduto.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 menuProdutoActionPerformed(evt);
@@ -69,9 +71,26 @@ public class TelaInicial extends javax.swing.JFrame {
         });
         menu.add(menuProduto);
 
+        menuCategoria.setText("Categoria");
+        menuCategoria.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                menuCategoriaActionPerformed(evt);
+            }
+        });
+        menu.add(menuCategoria);
+
         jMenuBar1.add(menu);
 
-        jMenu3.setText("Edit");
+        jMenu3.setText("Editar");
+
+        menuListarProduto.setText("Produtos");
+        menuListarProduto.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                menuListarProdutoActionPerformed(evt);
+            }
+        });
+        jMenu3.add(menuListarProduto);
+
         jMenuBar1.add(jMenu3);
 
         setJMenuBar(jMenuBar1);
@@ -104,6 +123,18 @@ public class TelaInicial extends javax.swing.JFrame {
         jdpFarmacia.add( frm );
         frm.setVisible(true); 
     }//GEN-LAST:event_menuProdutoActionPerformed
+
+    private void menuListarProdutoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuListarProdutoActionPerformed
+        ListProduto tela = new ListProduto(jdpFarmacia);
+        jdpFarmacia.add(tela);
+        tela.setVisible(true);
+    }//GEN-LAST:event_menuListarProdutoActionPerformed
+
+    private void menuCategoriaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuCategoriaActionPerformed
+        FrmCategoria frm = new FrmCategoria();
+        jdpFarmacia.add( frm );
+        frm.setVisible(true);
+    }//GEN-LAST:event_menuCategoriaActionPerformed
 
     /**
      * @param args the command line arguments
@@ -147,6 +178,8 @@ public class TelaInicial extends javax.swing.JFrame {
     private javax.swing.JMenuItem jMenuItem1;
     private javax.swing.JDesktopPane jdpFarmacia;
     private javax.swing.JMenu menu;
+    private javax.swing.JMenuItem menuCategoria;
+    private javax.swing.JMenuItem menuListarProduto;
     private javax.swing.JMenuItem menuProduto;
     // End of variables declaration//GEN-END:variables
 }
