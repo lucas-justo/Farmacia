@@ -11,6 +11,12 @@ import classes.Produto;
 public class ProdutoDAO {
     
     public static boolean inserir(Produto produto){
+        String fabricacao = "" + produto.getFabricacao().getYear() + "-" 
+                               + (produto.getFabricacao().getMonth() + 1) + "-"
+                               + produto.getFabricacao().getDate();
+        String validade = ""   + produto.getValidade().getYear() + "-" 
+                               + (produto.getValidade().getMonth() + 1) + "-"
+                               + produto.getValidade().getDate();
        
         String sql = "INSERT INTO produtos "
             + " ( nome, quantidade, preco , lote , fabricacao, validade , codCategoria ) "
@@ -19,8 +25,8 @@ public class ProdutoDAO {
             + " "  + produto.getQuantidade()            + "  ,"
             + " "  + produto.getPreco()                 + "  ,"
             + " '" + produto.getLote()                  + "'  ,"
-            + " "  + produto.getFabricacao()            + "  ,"
-            + " "  + produto.getValidade()              + "  ,"
+            + " '"  + fabricacao                        + "'  ,"
+            + " '"  + validade                          + "'  ,"
             + "  " + produto.getCategoria().getCodigo() + "    "
             + " );";
         return Conexao.executar(sql);
