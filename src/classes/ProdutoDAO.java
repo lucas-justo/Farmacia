@@ -54,7 +54,10 @@ public class ProdutoDAO {
     
     public static List<Produto> getProdutos(){
         List<Produto> lista = new ArrayList<>();
-        String sql = "SELECT * FROM produtos ORDER BY nome";
+        String sql = "SELECT p.codigo, p.nome , p.quantidade , p.preco , p.lote , p.fabricacao , p.validade , p.codCategoria, c.nome " +
+                " FROM produtos p " +
+                " INNER JOIN categorias c ON p.codCategoria = c.codigo " +
+                " ORDER BY p.nome";
         //
         ResultSet rs = Conexao.consultar( sql );
         
