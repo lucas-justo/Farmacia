@@ -29,7 +29,13 @@ public class TelaInicial extends javax.swing.JFrame {
 
         jMenuItem1 = new javax.swing.JMenuItem();
         jMenu1 = new javax.swing.JMenu();
+        jMenuItem2 = new javax.swing.JMenuItem();
+        jMenuBar2 = new javax.swing.JMenuBar();
+        jMenu2 = new javax.swing.JMenu();
+        jMenu4 = new javax.swing.JMenu();
         jdpFarmacia = new javax.swing.JDesktopPane();
+        jButton1 = new javax.swing.JButton();
+        jButton2 = new javax.swing.JButton();
         jMenuBar1 = new javax.swing.JMenuBar();
         menu = new javax.swing.JMenu();
         menuProduto = new javax.swing.JMenuItem();
@@ -37,12 +43,23 @@ public class TelaInicial extends javax.swing.JFrame {
         jMenu3 = new javax.swing.JMenu();
         menuListarProduto = new javax.swing.JMenuItem();
         menuListarCategorias = new javax.swing.JMenuItem();
+        jMenu5 = new javax.swing.JMenu();
+        menuSuporte = new javax.swing.JMenuItem();
 
         jMenuItem1.setText("jMenuItem1");
 
         jMenu1.setText("jMenu1");
 
+        jMenuItem2.setText("jMenuItem2");
+
+        jMenu2.setText("File");
+        jMenuBar2.add(jMenu2);
+
+        jMenu4.setText("Edit");
+        jMenuBar2.add(jMenu4);
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setPreferredSize(new java.awt.Dimension(800, 600));
 
         jdpFarmacia.setPreferredSize(new java.awt.Dimension(640, 480));
 
@@ -50,12 +67,16 @@ public class TelaInicial extends javax.swing.JFrame {
         jdpFarmacia.setLayout(jdpFarmaciaLayout);
         jdpFarmaciaLayout.setHorizontalGroup(
             jdpFarmaciaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 672, Short.MAX_VALUE)
+            .addGap(0, 800, Short.MAX_VALUE)
         );
         jdpFarmaciaLayout.setVerticalGroup(
             jdpFarmaciaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 534, Short.MAX_VALUE)
+            .addGap(0, 604, Short.MAX_VALUE)
         );
+
+        jButton1.setText("jButton1");
+
+        jButton2.setText("jButton2");
 
         menu.setText("Cadastrar");
         menu.addActionListener(new java.awt.event.ActionListener() {
@@ -102,17 +123,33 @@ public class TelaInicial extends javax.swing.JFrame {
 
         jMenuBar1.add(jMenu3);
 
+        jMenu5.setText("Suporte");
+
+        menuSuporte.setText("Contato");
+        menuSuporte.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                menuSuporteActionPerformed(evt);
+            }
+        });
+        jMenu5.add(menuSuporte);
+
+        jMenuBar1.add(jMenu5);
+
         setJMenuBar(jMenuBar1);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jdpFarmacia, javax.swing.GroupLayout.DEFAULT_SIZE, 672, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(jdpFarmacia, javax.swing.GroupLayout.PREFERRED_SIZE, 800, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jdpFarmacia, javax.swing.GroupLayout.DEFAULT_SIZE, 534, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(jdpFarmacia, javax.swing.GroupLayout.PREFERRED_SIZE, 604, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
 
         pack();
@@ -144,14 +181,18 @@ public class TelaInicial extends javax.swing.JFrame {
     }//GEN-LAST:event_menuCategoriaActionPerformed
 
     private void menuListarCategoriasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuListarCategoriasActionPerformed
-        ListCategoria tela = new ListCategoria();
+        ListCategoria tela = new ListCategoria(jdpFarmacia);
         jdpFarmacia.add( tela );
         tela.setVisible(true);
     }//GEN-LAST:event_menuListarCategoriasActionPerformed
+    
+    private void menuSuporteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuSuporteActionPerformed
+        Suporte tela = new Suporte();
+        jdpFarmacia.add( tela );
+        tela.setVisible(true);
+    }//GEN-LAST:event_menuSuporteActionPerformed
 
-    /**
-     * @param args the command line arguments
-     */
+    
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
@@ -185,15 +226,23 @@ public class TelaInicial extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton2;
     private javax.swing.JMenu jMenu1;
+    private javax.swing.JMenu jMenu2;
     private javax.swing.JMenu jMenu3;
+    private javax.swing.JMenu jMenu4;
+    private javax.swing.JMenu jMenu5;
     private javax.swing.JMenuBar jMenuBar1;
+    private javax.swing.JMenuBar jMenuBar2;
     private javax.swing.JMenuItem jMenuItem1;
+    private javax.swing.JMenuItem jMenuItem2;
     private javax.swing.JDesktopPane jdpFarmacia;
     private javax.swing.JMenu menu;
     private javax.swing.JMenuItem menuCategoria;
     private javax.swing.JMenuItem menuListarCategorias;
     private javax.swing.JMenuItem menuListarProduto;
     private javax.swing.JMenuItem menuProduto;
+    private javax.swing.JMenuItem menuSuporte;
     // End of variables declaration//GEN-END:variables
 }

@@ -12,7 +12,7 @@ public class CategoriaDAO {
     
     public static boolean inserir(Categoria categoria){
         String sql = "INSERT INTO categorias (nome)"
-                     + "VALUES ( ' " + categoria.getNome() + "'  );";
+                     + "VALUES ( '" + categoria.getNome() + "'  );";
         return Conexao.executar(sql);
     }
     
@@ -22,7 +22,7 @@ public class CategoriaDAO {
     }
     
     public static boolean excluir(Categoria categoria){
-        String sql = "DELETE FROM categorias" + "WHERE codigo = " + categoria.getCodigo();
+        String sql = "DELETE FROM categorias " + " WHERE codigo = " + categoria.getCodigo();
         return Conexao.executar(sql);
     }
     

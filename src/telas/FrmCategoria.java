@@ -7,6 +7,7 @@ package telas;
 
 import classes.Categoria;
 import classes.CategoriaDAO;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -133,6 +134,8 @@ public class FrmCategoria extends javax.swing.JInternalFrame {
         categoria.setNome( txtNome.getText() );
 
         CategoriaDAO.inserir( categoria );
+        JOptionPane.showMessageDialog(this,
+                "Categoria cadastrada com sucesso.");
     }//GEN-LAST:event_btnsalvarActionPerformed
 
 

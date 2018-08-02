@@ -68,7 +68,7 @@ public class ProdutoDAO {
                     pro.setCodigo( rs.getInt(1) );
                     pro.setNome( rs.getString(2) );
                     pro.setQuantidade( rs.getInt(3) );
-                    pro.setPreco( rs.getInt(4) );
+                    pro.setPreco( rs.getDouble(4) );
                     pro.setLote( rs.getString(5) );
                     pro.setFabricacao( rs.getDate(6) );
                     pro.setValidade( rs.getDate(7) );

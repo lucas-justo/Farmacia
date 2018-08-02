@@ -257,8 +257,10 @@ String nome = txtNome.getText();
             pro.setFabricacao(fabricacao);
             pro.setValidade(validade);     
             pro.setCategoria(categoria); 
-            ProdutoDAO.inserir(pro);        
-    }                   // TODO add your handling code here:
+            ProdutoDAO.inserir(pro);
+            JOptionPane.showMessageDialog(this,
+                "Produto cadastrado com sucesso.");
+    }                  
     }//GEN-LAST:event_btnSalvarActionPerformed
 
     private void btnLimparActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLimparActionPerformed
