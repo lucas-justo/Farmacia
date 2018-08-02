@@ -157,9 +157,9 @@ public class ListProduto extends javax.swing.JInternalFrame {
                     "Você deve selecionar um produto!");
         }else{
             int codigo = (int) tableProdutos.getValueAt(linha, 0);
-           // FrmProduto formulario = new FrmProduto( codigo );
-           // this.painelTelaInicial.add( formulario );
-           //formulario.setVisible( true );
+            FrmProduto formulario = new FrmProduto();
+            this.painelTelaInicial.add( formulario );
+            formulario.setVisible( true );
         }
         
     }//GEN-LAST:event_btnEditarActionPerformed
