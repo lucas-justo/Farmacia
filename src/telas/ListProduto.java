@@ -77,7 +77,7 @@ public class ListProduto extends javax.swing.JInternalFrame {
         tableProdutos.setPreferredSize(new java.awt.Dimension(490, 400));
         jScrollPane1.setViewportView(tableProdutos);
 
-        btnEditar.setText("EDITAR");
+        btnEditar.setText("Novo Produto");
         btnEditar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnEditarActionPerformed(evt);
@@ -100,12 +100,12 @@ public class ListProduto extends javax.swing.JInternalFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(jLabel1)
-                        .addGap(0, 494, Short.MAX_VALUE))
+                        .addGap(0, 500, Short.MAX_VALUE))
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(jScrollPane1)
                         .addGap(18, 18, 18)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(btnExcluir, javax.swing.GroupLayout.DEFAULT_SIZE, 97, Short.MAX_VALUE)
+                            .addComponent(btnExcluir, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(btnEditar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
                 .addContainerGap())
         );
@@ -150,16 +150,11 @@ public class ListProduto extends javax.swing.JInternalFrame {
     }//GEN-LAST:event_btnExcluirActionPerformed
 
     private void btnEditarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEditarActionPerformed
-        int linha = tableProdutos.getSelectedRow();
-        if( linha == -1 ){
-            JOptionPane.showMessageDialog(this, 
-                    "Você deve selecionar um produto!");
-        }else{
-            int codigo = (int) tableProdutos.getValueAt(linha, 0);
+        
             FrmProduto formulario = new FrmProduto();
             this.painelTelaInicial.add( formulario );
             formulario.setVisible( true );
-        }
+        
         
     }//GEN-LAST:event_btnEditarActionPerformed
 

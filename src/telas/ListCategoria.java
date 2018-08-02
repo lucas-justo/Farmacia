@@ -56,6 +56,7 @@ public class ListCategoria extends javax.swing.JInternalFrame {
         setClosable(true);
         setResizable(true);
         setTitle("Lista de Categorias");
+        setPreferredSize(new java.awt.Dimension(620, 500));
 
         jLabel1.setFont(new java.awt.Font("Estrangelo Edessa", 1, 18)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(51, 51, 51));
@@ -77,7 +78,7 @@ public class ListCategoria extends javax.swing.JInternalFrame {
         jScrollPane1.setViewportView(tableCategoria);
 
         btnEditar.setBackground(new java.awt.Color(204, 204, 204));
-        btnEditar.setText("EDITAR");
+        btnEditar.setText("Nova Categoria");
         btnEditar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnEditarActionPerformed(evt);
@@ -107,7 +108,7 @@ public class ListCategoria extends javax.swing.JInternalFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(btnEditar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(btnExcluir, javax.swing.GroupLayout.DEFAULT_SIZE, 97, Short.MAX_VALUE))))
+                            .addComponent(btnExcluir, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
                 .addContainerGap())
         );
         layout.setVerticalGroup(
@@ -129,14 +130,9 @@ public class ListCategoria extends javax.swing.JInternalFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnEditarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEditarActionPerformed
-        int linha = tableCategoria.getSelectedRow();
-        if( linha == -1 ){
-            JOptionPane.showMessageDialog(this,
-                "Você deve selecionar uma categoria!");
-        }else{
-            int codigo = (int) tableCategoria.getValueAt(linha, 0);
-            
-        }
+            FrmCategoria formulario = new FrmCategoria();
+            this.painelTelaInicial.add( formulario );
+            formulario.setVisible( true );
 
     }//GEN-LAST:event_btnEditarActionPerformed
 
