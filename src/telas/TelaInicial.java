@@ -36,6 +36,7 @@ public class TelaInicial extends javax.swing.JFrame {
         menuCategoria = new javax.swing.JMenuItem();
         jMenu3 = new javax.swing.JMenu();
         menuListarProduto = new javax.swing.JMenuItem();
+        menuListarCategorias = new javax.swing.JMenuItem();
 
         jMenuItem1.setText("jMenuItem1");
 
@@ -91,6 +92,14 @@ public class TelaInicial extends javax.swing.JFrame {
         });
         jMenu3.add(menuListarProduto);
 
+        menuListarCategorias.setText("Categorias");
+        menuListarCategorias.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                menuListarCategoriasActionPerformed(evt);
+            }
+        });
+        jMenu3.add(menuListarCategorias);
+
         jMenuBar1.add(jMenu3);
 
         setJMenuBar(jMenuBar1);
@@ -133,6 +142,12 @@ public class TelaInicial extends javax.swing.JFrame {
         jdpFarmacia.add( frm );
         frm.setVisible(true);
     }//GEN-LAST:event_menuCategoriaActionPerformed
+
+    private void menuListarCategoriasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuListarCategoriasActionPerformed
+        ListCategoria tela = new ListCategoria();
+        jdpFarmacia.add( tela );
+        tela.setVisible(true);
+    }//GEN-LAST:event_menuListarCategoriasActionPerformed
 
     /**
      * @param args the command line arguments
@@ -177,6 +192,7 @@ public class TelaInicial extends javax.swing.JFrame {
     private javax.swing.JDesktopPane jdpFarmacia;
     private javax.swing.JMenu menu;
     private javax.swing.JMenuItem menuCategoria;
+    private javax.swing.JMenuItem menuListarCategorias;
     private javax.swing.JMenuItem menuListarProduto;
     private javax.swing.JMenuItem menuProduto;
     // End of variables declaration//GEN-END:variables
