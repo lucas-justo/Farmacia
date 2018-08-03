@@ -67,7 +67,7 @@ public class TelaInicial extends javax.swing.JFrame {
         jdpFarmacia.setLayout(jdpFarmaciaLayout);
         jdpFarmaciaLayout.setHorizontalGroup(
             jdpFarmaciaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 800, Short.MAX_VALUE)
+            .addGap(0, 899, Short.MAX_VALUE)
         );
         jdpFarmaciaLayout.setVerticalGroup(
             jdpFarmaciaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -141,9 +141,7 @@ public class TelaInicial extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(jdpFarmacia, javax.swing.GroupLayout.PREFERRED_SIZE, 800, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+            .addComponent(jdpFarmacia, javax.swing.GroupLayout.DEFAULT_SIZE, 899, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)

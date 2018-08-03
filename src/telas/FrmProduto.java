@@ -260,6 +260,13 @@ String nome = txtNome.getText();
             ProdutoDAO.inserir(pro);
             JOptionPane.showMessageDialog(this,
                 "Produto cadastrado com sucesso.");
+            
+            txtNome.setText("");
+         txtLote.setText("");
+          txtQuantidade.setText("");
+           txtFabricacao.setText("");
+            txtValidade.setText("");
+             txtPreco.setText("");
     }                  
     }//GEN-LAST:event_btnSalvarActionPerformed
 

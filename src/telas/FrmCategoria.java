@@ -9,17 +9,20 @@ import classes.Categoria;
 import classes.CategoriaDAO;
 import javax.swing.JOptionPane;
 
+
 /**
  *
  * @author 181710131
  */
 public class FrmCategoria extends javax.swing.JInternalFrame {
-
+private boolean novo;
+private ListCategoria telaListCidades;
     /**
      * Creates new form FrmCategorias
      */
     public FrmCategoria() {
         initComponents();
+        
     }
 
     /**
@@ -136,6 +139,7 @@ public class FrmCategoria extends javax.swing.JInternalFrame {
         CategoriaDAO.inserir( categoria );
         JOptionPane.showMessageDialog(this,
                 "Categoria cadastrada com sucesso.");
+        txtNome.setText("");
     }//GEN-LAST:event_btnsalvarActionPerformed
 
 
