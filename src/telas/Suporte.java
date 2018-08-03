@@ -50,6 +50,7 @@ public class Suporte extends javax.swing.JInternalFrame {
         jLabel5.setText("dshvhsdvhjsdhvsdlhvlhdslvhlsdhlvsdlvh");
 
         setClosable(true);
+        setResizable(true);
 
         jLabel1.setFont(new java.awt.Font("Estrangelo Edessa", 0, 36)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(0, 102, 153));
@@ -102,7 +103,7 @@ public class Suporte extends javax.swing.JInternalFrame {
                         .addComponent(jLabel6)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jLabel7)))
-                .addContainerGap(27, Short.MAX_VALUE))
+                .addContainerGap(30, Short.MAX_VALUE))
         );
 
         pack();
