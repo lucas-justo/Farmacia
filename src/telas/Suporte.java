@@ -57,7 +57,7 @@ public class Suporte extends javax.swing.JInternalFrame {
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("Suporte");
 
-        jLabel2.setIcon(new javax.swing.ImageIcon("C:\\Users\\181710134\\Desktop\\dolphin.png")); // NOI18N
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/dolphin.png"))); // NOI18N
 
         jLabel3.setFont(new java.awt.Font("Verdana", 0, 14)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(0, 102, 204));
